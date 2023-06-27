@@ -18,6 +18,12 @@ The following changes must be made when building the board:
 - Add another bodge wire from the n!n's VCC to the VCC pad of the OLED header
 - Not sure if it is absolutely necessary to skip, but I did not solder the two jumpers
 
+## Peripheral encoder
+
+As of right now, encoders on the peripheral side are not supported in mainline ZMK.
+However, [there is a PR][3] with which support is added. You can use this branch when
+building if you want the peripheral encoder to work.
+
 ## Manual build steps
 
 ```
@@ -27,3 +33,4 @@ west build -p -b nice_nano_v2 -d build/right -- -DSHIELD="mokulua_right nice_vie
 
 [1]: https://mechwild.com/product/mokulua/
 [2]: https://github.com/zmkfirmware/zmk/pull/1297
+[3]: https://github.com/zmkfirmware/zmk/pull/1841
